@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkmode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                        13: '3.25rem',
+                    },
+                    fontFamily: {
+                        inter: ['Inter'],
+                    },
+                    colors: {
+                        wpu: '#bada55',
+                        kopi: 'c0ffee',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'spin-fast': 'spin 1s linear infinite',
+                        'goyang': 'goyang 3s ease-in-out infinite',
+                    },
+                    Keyframes: {
+                        goyang: {
+                            '0%, 100%': {
+                                transform: 'rotate(-3deg)',
+                            },
+                            '50%': {
+                                transform: 'rotate(3deg)',
+                            },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <title>Tailwind CSS Practice</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- <div class="w-8/12 py-2 mx-auto">
+        <button id="toggle">🌙</button>
+    </div> -->
+
+    <!-- <script>
+        document.querySelector('#toggle').addEventListener('click', function () {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script> -->
+
+    <!-- <section class="m-2 rounded-xl bg-gradient-to-br from-indigo-200 via-slate-500 to-slate-700">
+        <h1 class="text-center font-inter p-4 font-semibold text-neutral-100">Spacing</h1>
+        <h1 class="text-center font-inter p-4 font-semibold text-neutral-100">Spacing</h1>
+        <div class="m-10">margin</div>
+        <div class="p-8">padding</div>
+    </section> -->
+
+    <div>
+        <h1 class="text-6xl font-extrabold text-center m-4 p-4">Mar>i Kita Belajar TailwindCSS</h1>
+    </div>
+
+    <!-- sample card with TailwindCSS -->
+    <div class="flex items-center justify-center bg-gradient-to-br from-indigo-500 to-indigo-800">
+        <div class="bg-white font-semibold text-center rounded-3xl border shadow-2xl shadow-gray-800 p-10 max-w-xs m-6">
+            <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                alt="Front End" srcset="" />
+            <h1 class="text-lg text-gray-700">Yulidar Maulana</h1>
+            <h3 class="text-sm text-gray-400">Front End Developer</h3>
+            <p class="text-xs text-gray-400 mt-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio similique enim nobis explicabo praesentium
+                reprehenderit magnam recusandae, quasi eius est.
+            </p>
+            <button
+                class="bg-sky-400 hover:bg-sky-800 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Follow
+                Me</button>
+        </div>
+        <!-- <div class="bg-white font-semibold text-center rounded-3xl border shadow-2xl shadow-gray-800 p-10 max-w-xs m-6">
+            <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                alt="Front End" srcset="">
+            <h1 class="text-lg text-gray-700">Yulidar Maulana</h1>
+            <h3 class="text-sm text-gray-400"> Front End Developer</h3>
+            <p class="text-xs text-gray-400 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                similique enim
+                nobis explicabo praesentium
+                reprehenderit magnam recusandae, quasi eius est.</p>
+            <button
+                class="bg-indigo-600 hover:bg-sky-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Follow
+                Me</button>
+        </div>
+        <div class="bg-white font-semibold text-center rounded-3xl border shadow-2xl shadow-gray-800 p-10 max-w-xs m-6">
+            <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto"
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                alt="Front End" srcset="">
+            <h1 class="text-lg text-gray-700">Yulidar Maulana</h1>
+            <h3 class="text-sm text-gray-400"> Front End Developer</h3>
+            <p class="text-xs text-gray-400 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                similique enim
+                nobis explicabo praesentium
+                reprehenderit magnam recusandae, quasi eius est.</p>
+            <button
+                class="bg-indigo-600 hover:bg-sky-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">Follow
+                Me</button>
+        </div> -->
+    </div>
+
+    <section class="mb-10 bg-green-300 rounded-xl m-2">
+        <h2 class="text-center p-8">Sizing</h2>
+        <!-- <div class="w-32 h-10 text-center m-4">Kotak 1</div>
+        <div class="ma-w-xs m-4 pb-8">Kotak 2</div> -->
+    </section>
+
+    <section class="mb-10 font-inter max-w-3xl mx-auto ml-3">
+        <h2 class="mb-2 text-2xl font-bold">Belajar Mengenal Typography pada TailwindCSS</h2>
+        <div class="mb-4 text-lg text-gray-400 font">By Yulidar Maulana, 1 Juli 2022</div>
+        <blockquote class="mb-4 italic font-thin text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sequi culpa iusto numquam dolorem
+            consequatur omnis facilis tempore provident illum.
+        </blockquote>
+        <p class="mb-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis sunt sit ea a consequatur, dolorem quae
+            ipsum minima nam libero possimus aperiam ratione in voluptatibus itaque officia quia
+            iure enim facere quibusdam fuga quisquam cum. Vitae incidunt cum labore quae corporis pariatur. Repudiandae
+            optio harum illum eum non culpa commodi?
+        </p>
+    </section>
+
+    <div class="max-w-xl h-96 bg-slate-300 mx-auto mb-10 mt-[42px] overflow-y-scroll bg-fixed"
+        style="background-image: url('https://source.unsplash.com/1000x600')">
+        <p class="p-5 text-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, perferendis. Omnis, delectus
+            doloremque! Earum maiores illum cumque aliquid ut illo error assumenda ipsam, corporis amet
+            modi eum eos ullam iure sit incidunt beatae dolor recusandae natus fuga sed ducimus ab. Amet, ex. Quae minus
+            sint, mollitia nobis nisi repudiandae provident accusamus temporibus recusandae
+            modi quibusdam? Architecto assumenda odio reiciendis! Vitae tempore quisquam distinctio eum architecto unde
+            ipsam consequatur, ducimus voluptatibus rerum possimus vero officiis corporis sequi,
+            exercitationem tenetur commodi iure quis optio harum perferendis adipisci omnis cum. Velit nisi iusto
+            assumenda illo. Harum, ad? Vero velit rerum itaque nobis sequi perspiciatis eveniet
+            laborum consequatur molestias veritatis, numquam veniam quam. Ab fugit inventore pariatur voluptate et
+            voluptas praesentium, sequi quas voluptatibus officia iusto sit porro hic aut iure
+            debitis laboriosam nesciunt omnis minima quam qui consequatur cumque? Minima non laudantium itaque dolorem,
+            architecto alias laboriosam veritatis natus voluptates, odio assumenda possimus
+            sunt, harum asperiores obcaecati dignissimos nulla excepturi quas provident quasi ipsum. Minus nulla quis
+            placeat, tempora quam culpa error? Magni labore eaque blanditiis, error obcaecati
+            porro! Nemo perspiciatis quo eveniet sint fuga libero commodi, culpa expedita maxime accusamus modi eum, qui
+            debitis excepturi, numquam veritatis eligendi vitae magni pariatur. Accusamus.
+        </p>
+    </div>
+
+    <div class="mb-8 mt-10 max-w-xl h-96 mx-auto bg-slate-300 bg-cover rounded-2xl shadow-xl shadow-slate-400"
+        style="background-image: url(./img/unsplash.jpg)"></div>
+
+    <hr class="my-20" class="mb-8">
+    <button
+        class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-slate-600 active:bg-sky-800 focus:ring-sky-300">Submit</button>
+
+    <div
+        class="mb-10 max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-xl hover:bg-sky-500 group font-serif">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white">My Card
+        </h5>
+        <p
+            class="text-slate-600 group-hover:text-white selection:bg-lime-400 selection:text-slate-800 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum a, aspernatur ducimus, maxime omnis,
+            amet voluptates doloribus impedit officia quia vero deserunt. Sint facilis eaque
+            aspernatur, quo assumenda fuga ipsum.
+        </p>
+    </div>
+
+    <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-xl font-inter">
+        <form action="">
+            <label for="email">
+                <span
+                    class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+                <input type="email" name="" id="email" placeholder="masukan Email"
+                    class="px-3 py-2 shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink peer">
+                <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak vallid</p>
+            </label>
+        </form>
+    </div>
+
+    <hr class="my-20">
+
+    <div
+        class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-150 hover:rotate-45 hover:translate-x-16 hover:bg-purple-800 transition origin-top-left">
+    </div>
+
+    <div class="w-40 h-40 mx-auto mt-10 group">
+        <div
+            class="w-full h-full bg-sky-300 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000">
+        </div>
+    </div>
+
+    <div class="w-40 h-40 bg-sky-800 mx-auto rounded-lg shadow-lg mt-10 animate-spin-slow">
+    </div>
+
+    <hr class="my-20 border-t-4">
+
+    <div class="container px-8 mx-auto">
+        <div class="border rounded-lg shadow-lg p-10 relative">
+            <div class="w-10 h-10 bg-pink-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer"><a href="#"
+                    class="text-xl mx-auto">X</a>
+            </div>
+            <img class="float-left mr-3" src="img/unsplash.jpg" alt="something" width="150">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rem sed, nostrum dolorum minima vitae
+                aspernatur harum accusantium beatae labore. Neque deserunt eum beatae nulla nostrum nobis distinctio
+                laborum, aliquam at numquam labore? Facilis cum veritatis fuga quaerat nobis blanditiis. Quidem cumque
+                maxime facilis perspiciatis minus unde dicta veritatis ex.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto border rounded-lg shadow-lg p-10 mt-10 columns-3">
+            <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+            <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4">
+    </div>
+
+    <hr class="my-20 border-t-4">
+
+    <div class="container">
+        <h3>Yulidar Maulana</h3>
+        <img src="https://source.unsplash.com/1280x960" alt="laptop" srcset="">
+        <h2>Mari kita belajar bersama</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est laboriosam perspiciatis quibusdam dicta quod nesciunt ipsum delectus maiores amet mollitia repellendus animi voluptatem modi, sed suscipit quisquam consectetur vel veritatis nihil quo unde? Tempore sint quasi eos quisquam blanditiis fugiat?</p>
+        <div>
+            <a href="#">Subcribe</a>
+        </div>        
+    </div>
+    
+    <div class="mb-96">
+        
+    </div>
+
+</body>
+
+</html>
